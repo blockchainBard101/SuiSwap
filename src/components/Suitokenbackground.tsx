@@ -1,7 +1,13 @@
 import { useEffect, useState, useMemo } from 'react';
 
 const SUI_PROTOCOLS = [
+  // { name: 'Sui', logo: 'https://cryptologos.cc/logos/sui-sui-logo.png' },
+  // { name: 'Cetus', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/cetus.png' },
+  // { name: 'DeepBook', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/deepbook.png' },
+  // { name: 'Navi', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/navi.png' },
+  // { name: 'Scallop', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/scallop.png' },
   { name: 'Sui Blue', logo: '/Logo_Sui_Droplet_Sui Blue.svg' }
+
 ];
 
 const FlipToken = ({ x, y, size, delay }: { x: number; y: number; size: number; delay: number }) => {

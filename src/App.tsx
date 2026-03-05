@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sun, Moon, ArrowDownUp } from "lucide-react";
 import { ConnectButton, useCurrentAccount } from "@mysten/dapp-kit";
-import Logo from "./assets/Logo.png";
+const Logo = "/Logo_Sui_Droplet_Sui Blue.svg";
 import TokenSelect from "./components/TokenSelect";
 import TransactionHistory from "./components/Transactionhistory";
 import Suitokenbackground from "./components/Suitokenbackground";
