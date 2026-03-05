@@ -1,11 +1,7 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 const SUI_PROTOCOLS = [
-  { name: 'Sui', logo: 'https://cryptologos.cc/logos/sui-sui-logo.png' },
-  { name: 'Cetus', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/cetus.png' },
-  { name: 'DeepBook', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/deepbook.png' },
-  { name: 'Navi', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/navi.png' },
-  { name: 'Scallop', logo: 'https://raw.githubusercontent.com/sui-ecosystem/logos/main/scallop.png' },
+  { name: 'Sui Blue', logo: '/Logo_Sui_Droplet_Sui Blue.svg' }
 ];
 
 const FlipToken = ({ x, y, size, delay }: { x: number; y: number; size: number; delay: number }) => {
@@ -23,14 +19,14 @@ const FlipToken = ({ x, y, size, delay }: { x: number; y: number; size: number; 
   }, [delay]);
 
   return (
-    <div 
+    <div
       className="absolute transition-all duration-[3000ms] ease-in-out"
       style={{ left: `${x}%`, top: `${y}%` }}
     >
-      <div 
+      <div
         className="relative transition-transform duration-1000"
-        style={{ 
-          width: `${size}px`, 
+        style={{
+          width: `${size}px`,
           height: `${size}px`,
           perspective: '1000px',
           transformStyle: 'preserve-3d',
@@ -50,13 +46,13 @@ const FlipToken = ({ x, y, size, delay }: { x: number; y: number; size: number; 
               /* Dark Mode */
               dark:bg-blue-950/40 dark:border-cyan-500/30 dark:shadow-cyan-500/20
             `}
-            style={{ 
-              transform: `rotateY(${rotation}deg)` 
+            style={{
+              transform: `rotateY(${rotation}deg)`
             }}
           >
-            <img 
-              src={SUI_PROTOCOLS[(index + (rotation === 180 ? 1 : 0)) % SUI_PROTOCOLS.length].logo} 
-              alt="token" 
+            <img
+              src={SUI_PROTOCOLS[(index + (rotation === 180 ? 1 : 0)) % SUI_PROTOCOLS.length].logo}
+              alt="token"
               className="w-3/4 h-3/4 object-contain"
             />
           </div>
@@ -79,7 +75,7 @@ const Sui3DBackground = () => {
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden transition-colors duration-1000 bg-slate-50 dark:bg-[#020b14]">
       {/* Dynamic Background Glow */}
       <div className="absolute inset-0 opacity-40 dark:opacity-20 bg-[radial-gradient(circle_at_50%_50%,#0ea5e9_0%,transparent_70%)]" />
-      
+
       <div className="relative w-full h-full">
         {tokens.map(t => (
           <FlipToken key={t.id} {...t} />
