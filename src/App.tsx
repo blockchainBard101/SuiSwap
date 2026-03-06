@@ -311,7 +311,47 @@ export default function App() {
           </div>
         </main>
 
-        <footer className="py-10" />
+      <footer className="bg-[#1F2937] px-[10%] py-8 text-center text-sm text-gray-400">
+        <p className="mb-4">
+          © 2025 NextEpoch Labs — All Rights Reserved.
+        </p>
+
+        {/* SOCIALS */}
+        <div className="flex justify-center gap-6 mb-4">
+          <a
+            href="https://x.com/N3xtEp0chL4bs"
+            aria-label="Twitter"
+            className="text-gray-300 hover:text-white transition"
+          >
+            <FaXTwitter />
+          </a>
+
+          <a
+            href="https://github.com/orgs/N3xt-Ep0ch-L4bs/dashboard"
+            aria-label="GitHub"
+            className="text-gray-300 hover:text-white transition"
+          >
+            <Github size={18} />
+          </a>
+
+          <a
+            href="mailto:nextepochlabs@gmail.com"
+            aria-label="Community"
+            className="text-gray-300 hover:text-white transition"
+          >
+            <Mail size={18} />
+          </a>
+        </div>
+
+        <div className="flex justify-center gap-6">
+          <span className="cursor-pointer hover:text-white transition">
+            Privacy Policy
+          </span>
+          <span className="cursor-pointer hover:text-white transition">
+            Terms of Service
+          </span>
+        </div>
+      </footer>
       </div>
     </div>
   );
