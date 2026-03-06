@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, ArrowDownUp } from "lucide-react";
+import { Sun, Moon, ArrowDownUp, Github, Mail, Twitter } from "lucide-react";
 import { ConnectButton, useCurrentAccount } from "@mysten/dapp-kit";
 const Logo = "/Logo_Sui_Droplet_Sui Blue.svg";
 import TokenSelect from "./components/TokenSelect";
@@ -323,7 +323,7 @@ export default function App() {
             aria-label="Twitter"
             className="text-gray-300 hover:text-white transition"
           >
-            <FaXTwitter />
+            <Twitter />
           </a>
 
           <a
